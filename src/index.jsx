@@ -10,6 +10,9 @@ export default function App() {
     'LightItalic': require('../assets/fonts/Montserrat-LightItalic.ttf'),
     'Regular': require('../assets/fonts/Montserrat-Regular.ttf'),
     'Thin': require('../assets/fonts/Montserrat-Thin.ttf'),
+    'Bold': require('../assets/fonts/Montserrat-Bold.ttf'),
+    'Medium': require('../assets/fonts/Montserrat-Medium.ttf'),
+    
 
   })
   if(!loaded) {
