@@ -1,9 +1,9 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native'
 
 export const styles = StyleSheet.create({
     container:{
         flex:1,
-        height: 100,
+        height: 90,
         backgroundColor: '#fff',
         shadowColor: "#000",
         shadowOffset: {
@@ -19,34 +19,22 @@ export const styles = StyleSheet.create({
         paddingHorizontal:20,
         paddingVertical: 10,
         },
-
-    headerContainer:{
-        fontSize: 16,
-        fontFamily: 'Regular',
-        color: 'black',
-        marginBottom: 5,
+    date:{
+        fontSize:16,
+        fontFamily: 'Medium',
+        color: '#212121'
     },
     bodyContainer:{
-        flex:1,
+        flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'center',       
     },
-    content:{
-        flex: 1,
-    },
-    quantity:{
-        fontSize: 14,
-        fontFamily: 'Regular',
-        color: 'black',
-        marginBottom: 5
-    },
-    price:{
+    total: {
         fontSize: 15,
         fontFamily: 'Bold',
-        color: 'black',
-        marginBottom: 5
-    }
+        color: '#212121'
+    },
 
 })
