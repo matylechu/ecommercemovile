@@ -6,6 +6,11 @@ export const  styles = StyleSheet.create({
         backgroundColor: '#fff',
         paddingTop: StatusBar.currentHeight,
     },
+    image:{
+        width:'100%',
+        height:80,
+        marginBottom: 10,
+    },
     title:{
         fontSize: 20,
         fontFamily: "Regular"

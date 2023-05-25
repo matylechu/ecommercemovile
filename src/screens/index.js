@@ -1,3 +1,5 @@
 export {default as Productos} from './productos/index'
 export {default as Categorias} from './categories/index'
 export {default as Detalle} from './detalle/index'
+export {default as Cart} from './cart/index'
+export {default as Orders} from './orders/index'
