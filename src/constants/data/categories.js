@@ -7,6 +7,8 @@ export const CATEGORIES = [
       name: "Hombre",
   
       color: "#f1faee",
+      
+      
   
     },
   

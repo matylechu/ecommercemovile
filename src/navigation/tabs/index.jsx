@@ -17,7 +17,7 @@ const TabsNavigator = () => {
             fontFamily:'Regular',
             fontSize: 12,
         },
-        tabBarActiveTintColor: '#e63946',
+        tabBarActiveTintColor: '#E63946',
         tabBarInactiveTintColor: 'lightgray'
         }}
         >

@@ -29,5 +29,6 @@ export const styles = StyleSheet.create({
         fontFamily: 'Bold',
         color: '#212121'
 
-    }
+    },
+
 })

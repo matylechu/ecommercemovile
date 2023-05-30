@@ -4,11 +4,12 @@ import {PRODUCTS} from '../../constants/data/products'
 
 import {styles} from './styles'
 import { ProductItem } from "../../components";
+import { useSelector } from "react-redux";
 
 const Productos = ({navigation, route}) => {
-    const {categoryId} = route.params;
+    const category = useSelector((state) => state.categories.selected)
 
-    const filteredProduct = PRODUCTS.filter((product) => product.category === categoryId )
+    const filteredProduct = PRODUCTS.filter((product) => product.category === category.id)
 
     const onSelected = (item) => {
         navigation.navigate('Detalle', {
