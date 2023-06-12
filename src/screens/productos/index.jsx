@@ -1,23 +1,27 @@
-import React from "react";
-import {View, Text, Button, SafeAreaView, FlatList} from 'react-native'
-import {PRODUCTS} from '../../constants/data/products'
+import {React, useEffect} from "react";
+import {SafeAreaView, FlatList} from 'react-native'
+import { useSelector, useDispatch } from "react-redux";
+
 
 import {styles} from './styles'
 import { ProductItem } from "../../components";
-import { useSelector } from "react-redux";
+import {filterProducts,selectProduct} from '../../store/actions'
 
 const Productos = ({navigation, route}) => {
+    const dispatch = useDispatch()
     const category = useSelector((state) => state.categories.selected)
-
-    const filteredProduct = PRODUCTS.filter((product) => product.category === category.id)
+    const filteredProducts = useSelector((state) => state.products.filteredProducts)
 
     const onSelected = (item) => {
+        dispatch(selectProduct(item.id))
         navigation.navigate('Detalle', {
-            productId: item.id,
             name: item.name,
-            
         })
-    }
+    } 
+
+    useEffect(() => {
+        dispatch(filterProducts(category.id))
+    }, [])
 
     const keyExtractor = (item) => item.id.toString()
 
@@ -25,7 +29,7 @@ const Productos = ({navigation, route}) => {
     return(
         <SafeAreaView style={styles.container}>
             <FlatList
-            data={filteredProduct}
+            data={filteredProducts}
             renderItem={renderItem} 
             keyExtractor={keyExtractor}
             />

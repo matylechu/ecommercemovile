@@ -1,11 +1,11 @@
 import React from "react";
 import {View, Text, Image} from 'react-native'
 import {styles} from './styles'
-import { PRODUCTS } from "../../constants";
+import { useSelector } from "react-redux";
 
-const Detalle = ({route}) => {
-    const {productId} = route.params;
-    const product = PRODUCTS.find((product) => product.id === productId)
+const Detalle = ({}) => {
+    const product = useSelector((state) => state.products.selected)
+
     return(
         <View style={styles.container}>
             <Image resizeMode="contain" source={{uri: product.image}} style={styles.image}/>
