@@ -52,5 +52,22 @@ export const styles = StyleSheet.create({
         color:'black',
         fontFamily: 'Bold',
         fontSize: 15,
+    },
+    buttonDisabled: {
+        backgroundColor: 'ligthgray',
+        borderRadius: 5,
+        paddingHorizontal:20,
+        paddingVertical:15,
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        alignItems: 'center', 
+        shadowColor: "#000",
+        shadowOffset: {
+        width: 0,
+        height: 1,
+         },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+         elevation: 3, 
     }
 })

@@ -1,10 +1,16 @@
 import React from "react";
-import {View, Text, Image} from 'react-native'
+import {View, Text, Image, Button} from 'react-native'
 import {styles} from './styles'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../../store/actions";
 
 const Detalle = ({}) => {
+    const dispath = useDispatch()
     const product = useSelector((state) => state.products.selected)
+
+    const onAddtoCart = () =>{
+    dispath(addToCart(product))
+    }
 
     return(
         <View style={styles.container}>
@@ -12,6 +18,7 @@ const Detalle = ({}) => {
             <Text style={styles.name}>{product.name}</Text>
             <Text style={styles.price}>${product.price}</Text>
             <Text style={styles.description}>{product.description}</Text>
+            <Button title="Añadir al carrito" onPress={onAddtoCart} color='red' />
         </View>
     )
 }
