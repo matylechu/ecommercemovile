@@ -12,10 +12,10 @@ const validateInput = ({ name, value }) => {
     case "email":
       if (formatValue === "") {
         hasError = true;
-        error = "Email is required";
+        error = "Email es obligatorio!";
       } else if (!formatEmail.test(formatValue)) {
         hasError = true;
-        error = "Email is invalid";
+        error = "Email invalido!";
       } else {
         hasError = false;
         error = "";
@@ -24,10 +24,10 @@ const validateInput = ({ name, value }) => {
     case "password":
       if (formatValue === "") {
         hasError = true;
-        error = "Password is required";
+        error = "La contraseña es obligatorio!";
       } else if (formatValue.length < minPasswordLength) {
         hasError = true;
-        error = `Password must be at least ${minPasswordLength} characters`;
+        error = `La contraseña debe ser al menos ${minPasswordLength} caracteres`;
       } else {
         hasError = false;
         error = "";

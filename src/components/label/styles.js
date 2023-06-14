@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: "Regular",
     paddingVertical: 5,
-    color: '#000000',
+    color: 'white',
   },
   subLabel: {
     fontSize: 12,
